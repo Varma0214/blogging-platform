@@ -13,7 +13,7 @@ function AdminDashboard() {
 
   const fetchPosts = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/posts');
+      const res = await axios.get('https://blogging-platform-backend-cp1y.onrender.com/api/posts');
       setPosts(res.data);
     } catch (error) {
       console.error('Error fetching posts:', error);
@@ -23,7 +23,7 @@ function AdminDashboard() {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:5000/api/posts/${id}`, {
+      await axios.delete(`https://blogging-platform-backend-cp1y.onrender.com/api/posts/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchPosts();
