@@ -5,7 +5,7 @@ function BlogPost({ post }) {
     <div className="blog-post">
       {post.image && (
         <img
-          src={`http://localhost:5000${post.image}`}
+          src={`https://blogging-platform-backend-cp1y.onrender.com${post.image}`}
           alt={post.title}
           className="blog-image"
         />
