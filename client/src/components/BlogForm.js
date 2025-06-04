@@ -25,9 +25,9 @@ function BlogForm({ post, onSubmit }) {
       };
 
       if (post) {
-        await axios.put(`http://localhost:5000/api/posts/${post._id}`, formData, config);
+        await axios.put(`https://blogging-platform-backend-cp1y.onrender.com/api/posts/${post._id}`, formData, config);
       } else {
-        await axios.post('http://localhost:5000/api/posts', formData, config);
+        await axios.post('https://blogging-platform-backend-cp1y.onrender.com/api/posts', formData, config);
       }
       onSubmit();
     } catch (err) {
