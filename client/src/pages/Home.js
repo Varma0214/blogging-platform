@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/posts');
+        const res = await axios.get('https://blogging-platform-backend-cp1y.onrender.com/api/posts');
         setPosts(res.data);
       } catch (error) {
         console.error('Error fetching posts:', error);
